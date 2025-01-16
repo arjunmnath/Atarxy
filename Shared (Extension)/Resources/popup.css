@@ -13,3 +13,62 @@ body {
 @media (prefers-color-scheme: dark) {
     /* Dark Mode styles go here. */
 }
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f4f9;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #ddd;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: #4caf50;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+}
